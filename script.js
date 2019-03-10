@@ -14,7 +14,7 @@ document.onkeydown = function () {
             packMan.removeAttribute("class");
             packMan.classList.add("move-left");
             i = setInterval((() => (packMan.offsetLeft > 0 ?
-                packMan.style.left = packMan.offsetLeft - 1 + "px" : clearInterval(i))), 20);
+                packMan.style.left = packMan.offsetLeft - 1 + "px" : clearInterval(i))), 10);
             break;
         case 38:
             clearInterval(i);
@@ -22,7 +22,7 @@ document.onkeydown = function () {
             packMan.removeAttribute("class");
             packMan.classList.add("move-top");
             i = setInterval((() => (packMan.offsetTop > 0 ?
-                packMan.style.top = packMan.offsetTop - 1 + "px" : clearInterval(i))), 20);
+                packMan.style.top = packMan.offsetTop - 1 + "px" : clearInterval(i))), 10);
 
             break;
         case 39:
@@ -31,7 +31,7 @@ document.onkeydown = function () {
             packMan.removeAttribute("class");
             packMan.classList.add("move-right");
             i = setInterval((() => (packMan.offsetLeft < (offSetLeftFild - packMan.offsetWidth) ?
-                packMan.style.left = packMan.offsetLeft + 1 + "px" : clearInterval(i))), 20);
+                packMan.style.left = packMan.offsetLeft + 1 + "px" : clearInterval(i))), 10);
             break;
         case 40:
             clearInterval(i);
@@ -39,7 +39,7 @@ document.onkeydown = function () {
             packMan.removeAttribute("class");
             packMan.classList.add("move-bottom");
             i = setInterval((() => (packMan.offsetTop < (offSetTopFild - packMan.offsetHeight) ?
-                packMan.style.top = packMan.offsetTop + 1 + "px" : clearInterval(i))), 20);
+                packMan.style.top = packMan.offsetTop + 1 + "px" : clearInterval(i))), 10);
             break;
         case 32:
             clearInterval(i);
