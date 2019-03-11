@@ -2,30 +2,38 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
+    box-sizing: border-box;
+
 }
 
 .container {
     width: 100vw;
     height: 100vh;
-    border:20px solid #808080;
+    border: 20px solid #808080;
     box-sizing: border-box;
-
-    }
-.packMan-Fild{
-    width: 100%;
-    height: 100%;
-    position: relative;
-   background-image: url(img/backgr.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url(img/backgr.jpg) center/ cover no-repeat;
 }
 
+.packMan-Fild {
+    width: 80.5%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+
+}
 
 #packMan {
     width: 60px;
     height: 60px;
-    position: relative;
+    position: absolute;
+    display: inline-block;
+    z-index: +1;
+}
+
+#BotPakMen {
+    width: 60px;
+    height: 60px;
+    position: absolute;
     display: inline-block;
     z-index: +1;
 }
@@ -45,10 +53,17 @@
     width: 0;
     height: 0;
     position: absolute;
-    border-right: 30px solid transparent;
-    border-top: 30px solid #ffde00;
-    border-left: 30px solid #ffde00;
-    border-bottom: 30px solid #ffde00;
+    border: 30px solid #ffde00;
+    border-right-color:transparent;
+    border-radius: 30px;
+    transform-origin: center;
+}
+
+#BotPakMen > .packMan-top, #BotPakMen > .packMan-bottom {
+    border-top-color: red;
+    border-left-color: red;
+    border-bottom-color: red;
+    position: absolute;
     border-radius: 30px;
     transform-origin: center;
 }
@@ -107,9 +122,50 @@
     transform-origin: center;
 }
 
-
-.fruit{
+.fruit {
     width: 50px;
     position: absolute;
 }
 
+.Total-Fild {
+    display: inline-block;
+    width: 19%;
+    height: 100%;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    border-left: 20px solid #808080;
+    background-color: lightskyblue;
+}
+
+.Total-Fild h3 {
+    margin: 30px auto;
+}
+
+#total {
+    width: 80%;
+    height: 40px;
+    border: 3px solid blue;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 600;
+    color: red;
+}
+
+.Total {
+    height: 60%;
+    width: 100%;
+}
+
+.controlFild {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    padding-left: 20px;
+    color: mediumblue;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 auto;
+
+}
