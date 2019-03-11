@@ -129,23 +129,27 @@ setInterval(function () {
         if (Math.abs(packMan.offsetLeft - Bot.offsetLeft) < 50 &&
             Math.abs(packMan.offsetTop - Bot.offsetTop) < 50) {
             document.getElementsByClassName('packMan-Fild')[0].removeChild(packMan);
+        }
+        else if (Math.abs(packMan.offsetTop - Bot.offsetTop) > Math.abs(packMan.offsetLeft - Bot.offsetLeft)) {
+            if (packMan.offsetTop - Bot.offsetTop < 0) {
+                movesBot("top")
             }
-        else if (packMan.offsetLeft - Bot.offsetLeft < 0 && packMan.offsetTop - Bot.offsetTop < 100) {
-            movesBot("left")
+            else if (packMan.offsetTop - Bot.offsetTop > 0) {
+                movesBot("bottom")
+            }
         }
-        else if (packMan.offsetTop - Bot.offsetTop < 0 && packMan.offsetLeft - Bot.offsetLeft < 100) {
-            movesBot("top")
-        }
-        else if (packMan.offsetLeft - Bot.offsetLeft > 0 && packMan.offsetTop - Bot.offsetTop < 100) {
-            movesBot("right")
-        }
-        else if (packMan.offsetTop - Bot.offsetTop > 0 && packMan.offsetLeft - Bot.offsetLeft < 100) {
-            movesBot("bottom")
-        }
-    },
-    150
-);
 
+        else if (Math.abs(packMan.offsetTop - Bot.offsetTop) < Math.abs(packMan.offsetLeft - Bot.offsetLeft)) {
+            if (packMan.offsetLeft - Bot.offsetLeft < 0) {
+                movesBot("left")
+            }
+            else if (packMan.offsetLeft - Bot.offsetLeft > 0) {
+                movesBot("right")
+            }
+        }
+    }
+    , 200
+);
 
 
 newFruit();
