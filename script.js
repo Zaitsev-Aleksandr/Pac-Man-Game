@@ -153,4 +153,4 @@ setInterval(function () {
 
 
 newFruit();
-createBot();
+//createBot();
