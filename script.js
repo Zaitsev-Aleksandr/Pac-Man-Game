@@ -148,7 +148,7 @@ setInterval(function () {
             }
         }
     }
-    , 200
+    , 400
 );
 
 
