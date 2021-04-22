@@ -96,7 +96,7 @@ let movesBot = function (coordinateDiff) {
             Bot.removeAttribute("class");
             Bot.classList.add("move-left");
             b = setInterval((() => (Bot.offsetLeft > 0 ?
-                Bot.style.left = Bot.offsetLeft - 1 + "px" : clearInterval(b))), 6);
+                Bot.style.left = Bot.offsetLeft - 1 + "px" : clearInterval(b))), 10);
             break;
         case 'top':
             clearInterval(b);
@@ -104,7 +104,7 @@ let movesBot = function (coordinateDiff) {
             Bot.removeAttribute("class");
             Bot.classList.add("move-top");
             b = setInterval((() => (Bot.offsetTop > 0 ?
-                Bot.style.top = Bot.offsetTop - 1 + "px" : clearInterval(b))), 6);
+                Bot.style.top = Bot.offsetTop - 1 + "px" : clearInterval(b))), 10);
             break;
         case 'right':
             clearInterval(b);
@@ -112,7 +112,7 @@ let movesBot = function (coordinateDiff) {
             Bot.removeAttribute("class");
             Bot.classList.add("move-right");
             b = setInterval((() => (Bot.offsetLeft < (offSetLeftFild - Bot.offsetWidth) ?
-                Bot.style.left = Bot.offsetLeft + 1 + "px" : clearInterval(b))), 6);
+                Bot.style.left = Bot.offsetLeft + 1 + "px" : clearInterval(b))), 10);
             break;
         case 'bottom':
             setInterval(b);
@@ -120,7 +120,7 @@ let movesBot = function (coordinateDiff) {
             Bot.removeAttribute("class");
             Bot.classList.add("move-bottom");
             b = setInterval((() => (Bot.offsetTop < (offSetTopFild - Bot.offsetHeight) ?
-                Bot.style.top = Bot.offsetTop + 1 + "px" : clearInterval(b))), 6);
+                Bot.style.top = Bot.offsetTop + 1 + "px" : clearInterval(b))), 10);
             break;
     }
 };
@@ -148,7 +148,7 @@ setInterval(function () {
             }
         }
     }
-    , 400
+    , 200
 );
 
 
