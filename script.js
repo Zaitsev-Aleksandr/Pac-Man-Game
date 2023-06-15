@@ -5,6 +5,7 @@ let i = 'left';
 let Total = document.getElementById('total');
 let Bot;
 Total.value = 0;
+
 document.onkeydown = function () {
 
     switch (event.keyCode) {
